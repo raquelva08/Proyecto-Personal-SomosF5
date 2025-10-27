@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Portfolio - Raquel</title>
+        <link rel="stylesheet" href="contacto4.css">
+        <!--así vinculamos el html con el css-->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Proyectos Raquel - SomosF5</h1>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="indice1.html">⬅ Volver al perfil</a></li>
+                    <li><a href="dark-mode7.html">Dark Mode</a></li>
+                    <li><a href="galeria2.html">Galería</a></li>
+                    <li><a href="slider3.html">Slider</a></li>
+                    <li><a href="videos5.html">Vídeos</a></li>
+                    <li><a href="to-do6.html">To Do List</a></li>
+                    <li><a href="contacto4.html" class="active">Contacto</a></li>
+                    <li><a href="juegos8.html">Juegos</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+        <form class="contact-form" id="contactForm">
+            <h2>Contáctame</h2>
+
+            <div class="form-group">
+                <label for="name">Nombre completo</label>
+                <input type="text" id="name" name="name" required placeholder="Tu nombre...">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Asunto</label>
+                <input type="text" id="subject" name="subject" placeholder="Motivo del mensaje...">
+            </div>
+
+            <div class="form-group">
+                <label for="topic">Motivo de contacto</label>
+                <select id="topic" name="topic">
+                    <option value="">Selecciona una opción...</option>
+                    <option value="colaboracion">Colaboración</option>
+                    <option value="presupuesto">Presupuesto</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="otros">Otros</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" required placeholder="Escribe tu mensaje aquí..."></textarea>
+            </div>
+
+            <button type="submit">Enviar mensaje</button>
+
+            <p class="success-message" id="successMessage">✅ ¡Mensaje enviado con éxito!</p>
+        </form>
+        </main>
+
+        <script>
+            const form = document.getElementById("contactForm");
+            const successMessage = document.getElementById("successMessage");
+
+            form.addEventListener("submit", (e) => {
+            e.preventDefault(); // evita recargar la página
+            form.reset();
+            successMessage.style.display = "block";
+            setTimeout(() => {
+                successMessage.style.display = "none";
+            }, 4000);
+            });
+        </script>
+    </body>
+</html>

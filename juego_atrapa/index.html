@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atrapa el Círculo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="../juegos8.html"><button class="volver">Volver al portfolio</button></a>
+    <div class="container">
+        <header class="main-header">
+            <h1 class="main-title">Atrapa el Círculo</h1>
+            <p class="subtitle">¿Qué tan rápido eres?</p>
+        </header>
+
+        <main id="game-container" class="game-container">
+            <!-- Start Screen -->
+            <div id="start-screen" class="screen active">
+                <h2 class="screen-title">¡Bienvenida!</h2>
+                <p class="instructions">El objetivo es simple: haz clic en el círculo morado tantas veces como puedas antes de que se acabe el tiempo. ¡Buena suerte!</p>
+                <button id="start-button" class="btn">Empezar a Jugar</button>
+            </div>
+
+            <!-- Game Screen -->
+            <div id="game-screen" class="screen">
+                <div id="scoreboard">
+                    <div class="score-item">
+                        <span class="label">Puntuación</span>
+                        <p id="score-display" class="value">0</p>
+                    </div>
+                    <div class="score-item">
+                        <span class="label">Tiempo</span>
+                        <p id="time-display" class="value">30</p>
+                    </div>
+                </div>
+                <div id="game-board">
+                    <div id="target"></div>
+                </div>
+            </div>
+
+            <!-- Game Over Screen -->
+            <div id="game-over-screen" class="screen">
+                <h2 class="screen-title">¡Se acabó el tiempo!</h2>
+                <p class="instructions">Tu puntuación final es:</p>
+                <p id="final-score" class="final-score-value">0</p>
+                <button id="restart-button" class="btn">Jugar de Nuevo</button>
+            </div>
+        </main>
+
+        <footer class="main-footer">
+            <p>Creado con ❤️ usando HTML, CSS y JavaScript.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

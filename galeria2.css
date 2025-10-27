@@ -1,0 +1,144 @@
+:root{
+    --colorFondo: #FEF7DC;
+    --colorTexto: #360827;
+    --colorTitulo: #5E1043;
+    --sombras: #A13F80;
+    --colorTextoPrincipal: #432323;
+}
+
+/* CSS DEL NAV */
+
+body{
+    font-family: 'Poppins', system-ui, sans-serif;
+    background-color: var(--colorFondo);
+    margin: 0;
+    padding: 0; 
+    /* Margin y padding a 0 para tener html preparado */
+}
+
+header{
+    background-color: var(--colorFondo);
+    color: var(--colorTextoPrincipal);
+    padding: 1em 0;
+    text-align: center;
+}
+
+h1{
+    font-size: 2.5em;
+    margin: 0;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+.nav-menu{
+    list-style: none;
+    background-color: var(--colorTextoPrincipal);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 1em;
+}
+
+.nav-menu a{
+    margin: 10px 25px;
+    font-size: 20px;
+    padding: 10px;
+    transition: 0.4s;
+    border-radius: 10px;
+    transition: background-color 0.4s;
+    text-decoration: none;
+    color: var(--colorFondo);
+    display: inline-block;
+}
+
+
+.nav-menu a:hover{
+    background-color:var(--colorFondo);
+    color: var(--colorTexto);
+    font-size: 20px;
+}
+
+.nav-menu a.active {
+    background-color: #FEF7DC; /* amarillo suave */
+    color: var(--colorTexto);  /* marrón oscuro */
+}
+
+/* TERMINA EL CSS DEL NAV */
+
+.titulo{
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--colorTextoPrincipal);
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.contenedor-madre{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.elemento-hija{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 3px 10px 15px var(--colorTextoPrincipal);
+    transition: all 0.4s ease;
+}
+
+.elemento-hija:hover{
+    transform: scale(1.05);
+}
+
+.elemento-hija img{
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* --- CONTADOR DE LIKES --- */
+
+.like-section {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 4px 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.like-btn {
+    border: none;
+    background: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.like-btn:hover {
+    transform: scale(1.3);
+}
+
+.like-count {
+    font-weight: 600;
+    color: var(--colorTextoPrincipal);
+    font-size: 1rem;
+    padding-right: 4px;
+}

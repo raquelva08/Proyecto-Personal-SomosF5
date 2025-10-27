@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Dodge - Esquiva los Asteroides</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <a href="../juegos8.html"><button class="volver">Volver al portfolio</button></a>
+    <div class="container">
+        <div class="game-header">
+            <h1>🚀 SPACE DODGE</h1>
+            <div class="stats">
+                <div class="stat">
+                    <span class="label">PUNTUACIÓN</span>
+                    <span class="value" id="score">0</span>
+                </div>
+                <div class="stat">
+                    <span class="label">RÉCORD</span>
+                    <span class="value" id="highscore">0</span>
+                </div>
+                <div class="stat">
+                    <span class="label">VIDAS</span>
+                    <span class="value" id="lives">❤️❤️❤️</span>
+                </div>
+            </div>
+        </div>
+
+        <canvas id="gameCanvas"></canvas>
+
+        <div class="game-over" id="gameOver">
+            <h2>¡GAME OVER!</h2>
+            <p class="final-score">Puntuación: <span id="finalScore">0</span></p>
+            <button class="btn" id="restartBtn">JUGAR DE NUEVO</button>
+        </div>
+
+        <div class="start-screen" id="startScreen">
+            <h2>¡Bienvenido a Space Dodge!</h2>
+            <p>Usa las flechas ⬅️ ➡️ o A/D para mover tu nave</p>
+            <p>Esquiva los asteroides y sobrevive el mayor tiempo posible</p>
+            <button class="btn pulse" id="startBtn">COMENZAR</button>
+        </div>
+
+        <div class="controls">
+            <p>⬅️ A | D ➡️ para mover</p>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

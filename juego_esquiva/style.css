@@ -1,0 +1,273 @@
+/* =========================
+ESTILOS BASE
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --colorFondo: #FEF7DC;
+    --colorTexto: #411e1f;
+    --colorTitulo: #271112;
+    --sombras: #432323;
+    --colorTextoPrincipal: #432323;
+    --colorBlancoTransparente: rgba(255, 255, 255, 0.5);
+    --sombraColor: rgba(161, 63, 128, 0.4);
+    --sombraColorSuave: rgba(161, 63, 128, 0.2);
+    --colorAcento: #A13F80;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, sans-serif;
+    background: var(--colorFondo);
+    color: var(--colorTexto);
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =========================
+EFECTO DE FONDO
+========================= */
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(2px 2px at 20px 30px, var(--sombraColor), transparent),
+        radial-gradient(2px 2px at 60px 70px, var(--colorAcento), transparent),
+        radial-gradient(1px 1px at 50px 50px, var(--sombraColorSuave), transparent),
+        radial-gradient(1px 1px at 130px 80px, var(--colorAcento), transparent),
+        radial-gradient(2px 2px at 90px 10px, var(--colorTextoPrincipal), transparent);
+    background-size: 200px 200px;
+    animation: twinkle 3s infinite;
+    z-index: 0;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+/* =========================
+CONTENEDOR Y ENCABEZADO
+========================= */
+
+.volver{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: var(--colorAcento);
+    color: var(--colorFondo);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 6px var(--sombraColorSuave);
+}
+
+.volver:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px var(--sombraColor);
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+}
+
+.game-header {
+    text-align: center;
+    width: 100%;
+}
+
+.game-header h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--colorTitulo);
+    text-shadow: 0 0 10px var(--sombraColor);
+    animation: glow 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%, 100% { text-shadow: 0 0 15px var(--sombraColorSuave); }
+    50% { text-shadow: 0 0 30px var(--sombraColor); }
+}
+
+/* =========================
+ESTADÍSTICAS
+========================= */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px var(--sombraColorSuave);
+    border: 2px solid var(--sombraColor);
+}
+
+.stat .label {
+    font-size: 0.8rem;
+    color: var(--colorAcento);
+    margin-bottom: 5px;
+}
+
+.stat .value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--colorTextoPrincipal);
+}
+
+/* =========================
+CANVAS
+========================= */
+#gameCanvas {
+    border: 3px solid var(--sombraColor);
+    border-radius: 10px;
+    background: var(--colorBlancoTransparente);
+    box-shadow: 0 0 20px var(--sombraColorSuave);
+    max-width: 100%;
+}
+
+/* =========================
+PANTALLAS DE INICIO / GAME OVER
+========================= */
+.game-over, .start-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    border: 3px solid var(--sombraColor);
+    box-shadow: 0 0 40px var(--sombraColorSuave);
+    display: none;
+    z-index: 10;
+}
+
+.game-over.active, .start-screen.active {
+    display: block;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+    to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+.game-over h2, .start-screen h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--colorAcento);
+    text-shadow: 0 0 10px var(--sombraColor);
+}
+
+.start-screen h2 {
+    color: var(--colorTitulo);
+}
+
+.start-screen p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--colorTextoPrincipal);
+}
+
+.final-score {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: var(--colorTexto);
+}
+
+/* =========================
+BOTONES
+========================= */
+.btn {
+    background: linear-gradient(135deg, var(--colorAcento), var(--sombraColor));
+    border: none;
+    color: white;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 5px 20px var(--sombraColorSuave);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px var(--sombraColor);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}
+
+.btn.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* =========================
+CONTROLES
+========================= */
+.controls {
+    text-align: center;
+    margin-top: 10px;
+    color: var(--colorAcento);
+    font-size: 1.1rem;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    .game-header h1 {
+        font-size: 2rem;
+    }
+    
+    .stats {
+        gap: 20px;
+    }
+    
+    .stat {
+        padding: 8px 15px;
+    }
+    
+    .game-over, .start-screen {
+        padding: 30px 20px;
+        width: 90%;
+    }
+}

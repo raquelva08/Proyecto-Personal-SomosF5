@@ -1,0 +1,127 @@
+:root{
+    --colorFondo: #FEF7DC;
+    --colorTexto: #360827;
+    --colorTitulo: #5E1043;
+    --sombras: #A13F80;
+    --colorTextoPrincipal: #432323;
+}
+
+/* NAV */
+body{
+    font-family: 'Poppins', system-ui, sans-serif;
+    background-color: var(--colorFondo);
+    margin: 0;
+    padding: 0;
+    color: var(--colorTextoPrincipal);
+    min-height: 100vh;
+    
+}
+
+header{
+    background-color: var(--colorFondo);
+    color: var(--colorTextoPrincipal);
+    padding: 1em 0 0 0;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    text-align: center;
+
+}
+
+h1{
+    font-size: 2.5em;
+    margin: 10px 0 25px 0;
+}
+
+.nav-menu{
+    list-style: none;
+    background-color: var(--colorTextoPrincipal);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nav-menu a{
+    margin: 10px 25px;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--colorFondo);
+    display: inline-block;
+    transition: background-color 0.4s;
+}
+
+.nav-menu a:hover{
+    background-color: var(--colorFondo);
+    color: var(--colorTexto);
+}
+
+.nav-menu a.active {
+    background-color: #FEF7DC; /* amarillo suave */
+    color: var(--colorTexto);  /* marrón oscuro */
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    margin-top: 40px;
+}
+
+#selector-tema{
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--colorTextoPrincipal);
+    color: aliceblue;
+    cursor: pointer;
+    box-shadow: 0 2px 6px var(--colorTextoPrincipal);
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+#selector-tema:hover{
+    transform: translateY(-1px);
+    opacity: 0.93;
+}
+
+/* Modo oscuro (Se sobreescribe) */
+/* Se aplica cuando el body va tener la clase dark-mode */
+/* Modo oscuro completo */
+.dark-mode {
+    --colorFondo: #432323; /* fondo general */
+    --colorTextoPrincipal: #FEF7DC; /* texto principal */
+    --colorTitulo: #F2E0C9; /* títulos */
+    --sombras: #A13F80; /* sombras si quieres mantenerlas */
+}
+
+.dark-mode body {
+    background-color: var(--colorFondo);
+    color: var(--colorTextoPrincipal);
+}
+
+.dark-mode header {
+    background-color: var(--colorFondo);
+    color: var(--colorTextoPrincipal);
+}
+
+.dark-mode .nav-menu {
+    background-color: var(--colorTextoPrincipal); /* menú fondo oscuro */
+}
+
+.dark-mode .nav-menu a {
+    color: var(--colorFondo); /* links claros */
+}
+
+.dark-mode .nav-menu a:hover {
+    background-color: var(--colorFondo);
+    color: var(--colorTextoPrincipal);
+}
+
+.dark-mode #selector-tema {
+    background-color: var(--colorFondo);
+    color: var(--colorTextoPrincipal);
+    box-shadow: 0 2px 6px var(--sombras);
+}

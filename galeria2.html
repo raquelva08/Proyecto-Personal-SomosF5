@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Portfolio - Raquel</title>
+        <link rel="stylesheet" href="galeria2.css">
+        <!--así vinculamos el html con el css-->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Proyectos Raquel - SomosF5</h1>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="indice1.html">⬅ Volver al perfil</a></li>
+                    <li><a href="dark-mode7.html">Dark Mode</a></li>
+                    <li><a href="galeria2.html" class="active">Galería</a></li>
+                    <li><a href="slider3.html">Slider</a></li>
+                    <li><a href="videos5.html">Vídeos</a></li>
+                    <li><a href="to-do6.html">To Do List</a></li>
+                    <li><a href="contacto4.html">Contacto</a></li>
+                    <li><a href="juegos8.html">Juegos</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+        <h1 class="titulo">Galería de imágenes</h1>
+        <div class="contenedor-madre">
+            <div class="elemento-hija">
+                <img src="https://cdn.pixabay.com/photo/2024/12/20/09/21/house-sparrow-9279721_1280.jpg" alt="Pájaro en rama">
+                <div class="like-section">
+                    <button class="like-btn" onclick="sumarLikes(this)">❤️</button>
+                    <span class="like-count">0</span>
+                </div>
+            </div>
+            <div class="elemento-hija">
+                <img src="https://cdn.pixabay.com/photo/2020/05/05/18/33/flower-5134415_1280.jpg" alt="Flor amarilla">
+                <div class="like-section">
+                    <button class="like-btn" onclick="sumarLikes(this)">❤️</button>
+                    <span class="like-count">0</span>
+                </div>
+            </div>
+            <div class="elemento-hija">
+                <img src="https://cdn.pixabay.com/photo/2024/04/08/11/42/doggy-8683291_1280.jpg" alt="Perro en otoño">
+                <div class="like-section">
+                    <button class="like-btn" onclick="sumarLikes(this)">❤️</button>
+                    <span class="like-count">0</span>
+                </div>
+            </div>
+            <div class="elemento-hija">
+                <img src="https://cdn.pixabay.com/photo/2019/11/19/12/02/tree-4637270_1280.jpg" alt="Árbol otoñal">
+                <div class="like-section">
+                    <button class="like-btn" onclick="sumarLikes(this)">❤️</button>
+                    <span class="like-count">0</span>
+                </div>
+            </div>
+            <div class="elemento-hija">
+                <img src="https://cdn.pixabay.com/photo/2014/12/08/02/59/benches-560435_1280.jpg" alt="Bancos en otoño">
+                <div class="like-section">
+                    <button class="like-btn" onclick="sumarLikes(this)">❤️</button>
+                    <span class="like-count">0</span>
+                </div>
+            </div>
+            <div class="elemento-hija">
+                <img src="https://cdn.pixabay.com/photo/2023/12/15/22/37/trees-8451481_1280.jpg" alt="Paisaje otoñal">
+                <div class="like-section">
+                    <button class="like-btn" onclick="sumarLikes(this)">❤️</button>
+                    <span class="like-count">0</span>
+                </div>
+            </div>
+            <!-- (div.elemento-hija>img)*5 -->
+        </div>
+        </main>
+
+        <script>
+            function sumarLikes(boton) {
+                // Buscar el <span> dentro del mismo contenedor del botón
+                const contador = boton.parentElement.querySelector(".like-count");
+                // esto localiza el número de likes asociado al botón que presionaste
+                let valorActual = parseInt(contador.innerText);
+                contador.innerText = valorActual + 1;
+            }
+        </script>
+
+
+    </body>
+</html>
+
+
+<!-- 
+HTML DEL NAV SOLO
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Menú navegación</title>
+        <link rel="stylesheet" href="galeria2.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Proyectos Raquel - SomosF5</h1>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="indice1.html">Volver al perfil</a></li>
+                    <li><a href="galeria2.html">Galería</a></li>
+                    <li><a href="https://www.rentalcars.com/en/country/br/?affiliateCode=msn_new_ob&preflang=en&label=:mdmsn-g2crIjc5FgK*6iq0atddNA:tyS:ai76141238965728:caRegions%20-%20Brazil:mecpc:sobing:teg2crIjc5FgK*6iq0atddNA&msclkid=ef6dd8b96b331dbe78ecb05acf71cc3e" target="_blank">Cuba</a></li>
+                    <li><a href="https://www.booking.com/city/fr/paris.es.html?aid=352056&pagename=city-paris&label=msn-14AL0BfPfjzcwExMA4Y8eg-80264518439692:tikwd-80264738431955:loc-170:neo:mte:lp3173:dec:qsfrancia&utm_campaign=France&utm_medium=cpc&utm_source=bing&utm_term=14AL0BfPfjzcwExMA4Y8eg&msclkid=2bfadb545a7211e796deb3b7fe179633&utm_content=Paris%20-%20UFI%3A-1456928" target="_blank">Francia</a></li>
+                    <li><a href="https://www.getyourguide.es/-l169032/?cmp=bing&cmp=bing&ad_id=78615285951881&adgroup_id=1257841950174942&bid_match_type=be&campaign_id=710109112&device=c&feed_item_id=&keyword=china%20que%20ver&loc_interest_ms=39&loc_physical_ms=3173&match_type=e&msclkid=f9b7d9f83e5013847d78b11b9af3cae0&network=o&partner_id=CD951&target_id=kwd-78615532031704:loc-170&utm_adgroup=lc%3D169032%3Achina%7Cfn%3Df2%7Cci%3D937%3Athings%20to%20do&utm_campaign=dc%3D50%3Acn%7Clc%3D169032%3Achina%7Cct%3Dcore%7Cln%3D109%3Aes%7Ctc%3Dall&utm_keyword=china%20que%20ver&utm_medium=paid_search&utm_query=china%20que%20ver&utm_source=bing" target="_blank">China</a></li>
+                    <li><a href="https://www.hometogo.es/search/5460aeb540958?hl=es_ES&adword=bing%2Fes%2Fkwd-83770317282953%3Aloc-170%2Fct%3Ds%3Blc%3Dlt%3Bd%3Da%3Btc%3DES%3Bln%3Des%3Bot%3DAlj%3Blt%3Dab%3Bmt%3Dbe%3Bcid%3D3894f923a8a78a61%2Ffi%2Fn-a%2F5460aeb540958%2F83769471238138%2Falojamiento%20laponia%20finlandesa&mktasp=acid%3D136005935%3Bcpid%3D399368686%3Bagid%3D1340305493186729%3Badid%3D83769471238138%3Bkwid%3Dkwd-83770317282953%3Aloc-170%3Bdvce%3Dc%3B&msclkid=fdb6f8ea81cd106266a490092505aa11&utm_source=bing&utm_medium=cpc&utm_campaign=ct%3Ds%3B%20lc%3Dlt%3B%20d%3Da%3B%20tc%3DES%3B%20ln%3Des%3B%20ot%3DAlj%3B%20lt%3Dab%3B%20mt%3Dbe%3B%20cid%3D3894f923a8a78a61&utm_term=alojamiento%20laponia%20finlandesa&utm_content=dc%3DFI%3B%20ll%3DLapland%3B%20pt%3D%3B%20lid%3D5460aeb540958%3B%20aid%3Df973983f508bb0c7" target="_blank">Laponia</a></li>
+                </ul>
+            </nav>
+        </header>
+    </body>
+</html>
+
+-->
+

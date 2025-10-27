@@ -1,0 +1,109 @@
+:root{
+    --colorFondo: #FEF7DC;
+    --colorTexto: #360827;
+    --colorTitulo: #5E1043;
+    --sombras: #A13F80;
+    --colorTextoPrincipal: #432323;
+}
+
+/* CSS DEL NAV */
+
+body{
+    font-family: 'Poppins', system-ui, sans-serif;
+    background-color: var(--colorFondo);
+    margin: 0;
+    padding: 0; 
+    /* Margin y padding a 0 para tener html preparado */
+}
+
+header{
+    background-color: var(--colorFondo);
+    color: var(--colorTextoPrincipal);
+    padding: 1em 0;
+    text-align: center;
+}
+
+h1{
+    font-size: 2.5em;
+    margin: 0;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+.nav-menu{
+    list-style: none;
+    background-color: var(--colorTextoPrincipal);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 1em;
+}
+
+.nav-menu a{
+    margin: 10px 25px;
+    font-size: 20px;
+    padding: 10px;
+    transition: 0.4s;
+    border-radius: 10px;
+    transition: background-color 0.4s;
+    text-decoration: none;
+    color: var(--colorFondo);
+    display: inline-block;
+}
+
+
+.nav-menu a:hover{
+    background-color:var(--colorFondo);
+    color: var(--colorTexto);
+    font-size: 20px;
+}
+
+.nav-menu a.active {
+    background-color: #FEF7DC; /* amarillo suave */
+    color: var(--colorTexto);  /* marrón oscuro */
+}
+
+
+.titulo-acordeon{
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--colorTextoPrincipal);
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.contenedor-slider{
+    display: flex;
+    min-width: 550px; /* anchura mínima */
+    max-width: 1000px; /* anchura máxima */
+    height: 50vh; /* altura (viewport height) */
+    margin: 0 auto;
+    margin-bottom: 50px;
+    overflow: hidden;
+    border: 3px solid var(--colorTextoPrincipal);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgb(53, 4, 4); 
+    /* (arrib-abaj) (derecha-izquierda) (difuminado) (color) */
+}
+
+.elemento-slider{
+    flex: 1;
+    /* flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0; */
+    min-width: 0;
+    object-fit: cover;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+    filter: grayscale(90%); /* cuanto efecto en porcentaje de blanco y negro tienen las imágenes */
+}
+
+.elemento-slider:hover{
+    cursor: pointer;
+    flex: 4;
+    filter: grayscale(0%);
+    transform: scale(1.03);
+}

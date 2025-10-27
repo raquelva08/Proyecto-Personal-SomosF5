@@ -1,0 +1,116 @@
+:root{
+    --colorFondo: #FEF7DC;
+    --colorTexto: #360827;
+    --colorTitulo: #5E1043;
+    --sombras: #A13F80;
+    --colorTextoPrincipal: #432323;
+}
+
+/* CSS DEL NAV */
+
+body{
+    font-family: 'Poppins', system-ui, sans-serif;
+    background-color: var(--colorFondo);
+    margin: 0;
+    padding: 0; 
+    /* Margin y padding a 0 para tener html preparado */
+}
+
+header{
+    background-color: var(--colorFondo);
+    color: var(--colorTextoPrincipal);
+    padding: 1em 0;
+    text-align: center;
+}
+
+h1{
+    font-size: 2.5em;
+    margin: 0;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+.nav-menu{
+    list-style: none;
+    background-color: var(--colorTextoPrincipal);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 1em;
+}
+
+.nav-menu a{
+    margin: 10px 25px;
+    font-size: 20px;
+    padding: 10px;
+    transition: 0.4s;
+    border-radius: 10px;
+    transition: background-color 0.4s;
+    text-decoration: none;
+    color: var(--colorFondo);
+    display: inline-block;
+}
+
+
+.nav-menu a:hover{
+    background-color:var(--colorFondo);
+    color: var(--colorTexto);
+    font-size: 20px;
+}
+
+.nav-menu a.active {
+    background-color: #FEF7DC; /* amarillo suave */
+    color: var(--colorTexto);  /* marrón oscuro */
+}
+
+/* TERMINA EL CSS DEL NAV */
+
+.juegos-contenedor{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.juego{
+    background-color: var(--colorTextoPrincipal);
+    color: var(--colorFondo);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 4px 4px 8px var(--sombras);
+    transition: transform 0.3s, box-shadow 0.3s;
+    min-height: 300px;
+}
+
+.juego:hover{
+    transform: translateY(-10px);
+    box-shadow: 6px 6px 12px var(--sombras);
+    cursor: pointer;
+}
+
+.juego img{
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border-radius: 15px;
+}
+
+.h1{
+    transition: color 0.3s;
+    font-size: 0.8em;
+    margin: 0;
+    color: var(--colorFondo);
+}
+.h1:hover{
+    color: pink;
+}
+
+a{
+    text-decoration: none;
+}

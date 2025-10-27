@@ -1,0 +1,167 @@
+:root{
+    --colorFondo: #FEF7DC;
+    --colorTexto: #360827;
+    --colorTitulo: #5E1043;
+    --sombras: #A13F80;
+    --colorTextoPrincipal: #432323;
+}
+
+/* CSS DEL NAV */
+
+body{
+    font-family: 'Poppins', system-ui, sans-serif;
+    background-color: var(--colorFondo);
+    margin: 0;
+    padding: 0; 
+    /* Margin y padding a 0 para tener html preparado */
+}
+
+header{
+    background-color: var(--colorFondo);
+    color: var(--colorTextoPrincipal);
+    padding: 1em 0;
+    text-align: center;
+}
+
+h1{
+    font-size: 2.5em;
+    margin: 0;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+.nav-menu{
+    list-style: none;
+    background-color: var(--colorTextoPrincipal);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 1em;
+}
+
+.nav-menu a{
+    margin: 10px 25px;
+    font-size: 20px;
+    padding: 10px;
+    transition: 0.4s;
+    border-radius: 10px;
+    transition: background-color 0.4s;
+    text-decoration: none;
+    color: var(--colorFondo);
+    display: inline-block;
+}
+
+
+.nav-menu a:hover{
+    background-color:var(--colorFondo);
+    color: var(--colorTexto);
+    font-size: 20px;
+}
+
+.nav-menu a.active {
+    background-color: #FEF7DC; /* amarillo suave */
+    color: var(--colorTexto);  /* marrón oscuro */
+}
+
+
+/*  probandoo */
+
+main{
+    font-family: 'Poppins', system-ui, sans-serif;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.contact-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 1rem;
+    box-shadow: 0 5px 20px var(--colorTextoPrincipal);
+    width: 100%;
+    max-width: 500px;
+    font-family: 'Poppins', system-ui, sans-serif;
+    margin-bottom: 30px;
+    box-sizing: border-box; 
+    overflow: hidden; 
+    padding-right: 45px;
+    color: var(--colorTextoPrincipal);
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    font-size: 1.9rem;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.3rem;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: 0.3s;
+    font-family: 'Poppins', system-ui, sans-serif;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+select{
+    width: 106.5%;
+    padding-right: 60px;
+    appearance: none;              
+    background: #fff url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path fill='%23666' d='M6 8L0 0h12z'/></svg>") no-repeat right 1rem center; /* 👈 flechita con espacio */
+    background-size: 12px;        
+    padding-right: 2.5rem;
+}
+
+button {
+    width: 106.5%;
+    padding: 0.9rem;
+    background-color: var(--colorTextoPrincipal);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: 'Poppins', system-ui, sans-serif;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: var(--colorTexto);
+}
+
+.success-message {
+    text-align: center;
+    color: green;
+    font-weight: 500;
+    margin-top: 1rem;
+    display: none;
+}

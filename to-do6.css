@@ -1,0 +1,175 @@
+:root{
+    --colorFondo: #FEF7DC;
+    --colorTexto: #360827;
+    --colorTitulo: #5E1043;
+    --sombras: #A13F80;
+    --colorTextoPrincipal: #432323;
+}
+
+/* NAV */
+body{
+    font-family: 'Poppins', system-ui, sans-serif;
+    background-color: var(--colorFondo);
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: var(--colorFondo);
+    color: var(--colorTextoPrincipal);
+    padding: 1em 0;
+    text-align: center;
+}
+
+h1{
+    font-size: 2.5em;
+    margin: 10px 0 25px 0;
+}
+
+.nav-menu{
+    list-style: none;
+    background-color: var(--colorTextoPrincipal);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nav-menu a{
+    margin: 10px 25px;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--colorFondo);
+    display: inline-block;
+    transition: background-color 0.4s;
+}
+
+.nav-menu a:hover{
+    background-color: var(--colorFondo);
+    color: var(--colorTexto);
+}
+
+.nav-menu a.active {
+    background-color: #FEF7DC; /* amarillo suave */
+    color: var(--colorTexto);  /* marrón oscuro */
+}
+
+/* TO-DO APP */
+
+
+.todo_app{
+    background: #fff;
+    padding: 20px;
+    border-radius: 1rem;
+    box-shadow: 0 5px 20px var(--colorTextoPrincipal);
+    width: 100%;
+    max-width: 500px;
+    font-family: 'Poppins', system-ui, sans-serif;
+    margin-bottom: 30px;
+    box-sizing: border-box; 
+    overflow: scroll; 
+    padding-right: 45px;
+    color: var(--colorTextoPrincipal);
+    margin: 1.2rem auto;
+    height: 62vh;
+}
+
+.titulo-todo{
+    text-align: center;
+    text-decoration-line: underline;
+    font-size: 2rem;
+}
+
+.input-container{
+    display: flex;
+    gap: 8px;
+    margin-top: 1rem;
+}
+
+#tarea_input{
+    flex-grow: 1;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid rgb(90, 88, 88);
+    margin-left: 25px;
+}
+
+#agregarTarea{
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--colorTextoPrincipal);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#agregarTarea:hover{
+    background-color: var(--colorTexto);
+}
+
+#tareaLista{
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.task-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 5px;
+    border-left: 5px solid var(--colorTitulo);
+    transition: all 0.3s ease;
+}
+
+.task-item span{
+    flex-grow: 1;
+    margin-right: 10px;
+    font-size: 1em;
+}
+
+.task-item.completed{
+    background-color: #f0f8ff;
+    border-left: 5px solid #19a314;
+    opacity: 0.8;
+}
+
+.task-item.completed span{
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task-item button{
+    border: none;
+    padding: 8px;
+    margin-left: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.completed-btn{
+    background-color: #19a314;
+    color: #fff;
+}
+
+.completed-btn:hover{
+    background-color: #0c6309;
+}
+
+.delete-btn{
+    background-color: #ad3434;
+    color: #fff;
+}
+
+.delete-btn:hover{
+    background-color: #5f1111;
+}
